@@ -1,4 +1,4 @@
-unique_name: maxtaxamount1
+unique_name: Max Tax Amount
 object_type: metric
 label: Max Tax Amount
 calculation_method: maximum
