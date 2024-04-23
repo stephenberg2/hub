@@ -1,4 +1,4 @@
-unique_name: Sales Amount SStdev
+unique_name: salesamountsstdev
 object_type: metric
 label: Sales Amount SStdev
 calculation_method: stddev_samp

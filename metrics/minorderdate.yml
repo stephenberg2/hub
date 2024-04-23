@@ -1,4 +1,4 @@
-unique_name: MinOrderDate
+unique_name: minorderdate
 object_type: metric
 label: Min Order Date
 calculation_method: minimum

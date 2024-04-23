@@ -1,6 +1,6 @@
-unique_name: MaxOrderDate
+unique_name: maxorderdate
 object_type: metric
-label: MaxOrderDate
+label: Max Order Date
 calculation_method: maximum
 dataset: factinternetsales
 column: orderdatekey

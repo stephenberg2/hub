@@ -1,4 +1,4 @@
-unique_name: customercountestimate1
+unique_name: estimatedcustomercount
 object_type: metric
 label: Estimated Customer Count
 calculation_method: estimated count distinct
