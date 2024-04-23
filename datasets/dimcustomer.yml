@@ -1,7 +1,7 @@
 unique_name: dimcustomer
 object_type: dataset
 label: dimcustomer
-connection_id: snowflake partner
+connection_id: snowflake
 table: DIMCUSTOMER
 
 columns:
