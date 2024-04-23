@@ -1,4 +1,4 @@
-unique_name: maxOrderDate
+unique_name: MaxOrderDate
 object_type: metric
 label: MaxOrderDate
 calculation_method: maximum
