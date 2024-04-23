@@ -102,30 +102,6 @@ relationships:
       level: Product Line
     type: snowflake
 
-calculation_groups:
-
-  - unique_name: Product Metrics
-    label: Product Metrics
-    folder: Product Attributes
-
-    calculated_members:
-
-      - unique_name: Product Hierarchy Pct of Total
-        expression: "divide(([Product Dimension].[Product Dimension].CurrentMember,\
-          \ [Measures].currentMember) , ([Product Dimension].[Product Dimension].[All],\
-          \ [Measures].currentMember))"
-        format: Percent
-        hierarchy: Product Dimension
-        template: Custom
-
-      - unique_name: Current
-        description: The measure's value for the current dimension members in the
-          query.
-        expression: "([Product Dimension].[Product Dimension].CurrentMember, [Measures].currentMember)"
-        format: Standard
-        hierarchy: Product Dimension
-        template: Current
-        is_default: true
 
 modeler_metadata:
   version: 0
