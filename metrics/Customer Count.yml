@@ -5,3 +5,4 @@ calculation_method: count distinct
 format: General Number
 dataset: factinternetsales
 column: customerkey
+folder: Sales Metrics

@@ -5,3 +5,4 @@ calculation_method: sum
 format: "$#,##0.00"
 dataset: factinternetsales
 column: salesamount
+folder: Sales Metrics

@@ -5,3 +5,4 @@ calculation_method: sum
 format: General Number
 dataset: factinternetsales
 column: orderquantity
+folder: Sales Metrics

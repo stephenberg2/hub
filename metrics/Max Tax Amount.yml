@@ -5,3 +5,4 @@ calculation_method: maximum
 format: "$#,##0.00"
 dataset: factinternetsales
 column: taxamt
+folder: Sales Metrics

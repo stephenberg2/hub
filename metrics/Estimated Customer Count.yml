@@ -1,7 +1,8 @@
-unique_name: customercountestimate1
+unique_name: Estimated Customer Count
 object_type: metric
 label: Estimated Customer Count
 calculation_method: estimated count distinct
 format: General Number
 dataset: factinternetsales
 column: customerkey
+folder: 

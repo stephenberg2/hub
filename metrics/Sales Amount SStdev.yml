@@ -5,3 +5,4 @@ calculation_method: stddev_samp
 format: "$#,##0.00"
 dataset: factinternetsales
 column: salesamount
+folder: Sales Metrics

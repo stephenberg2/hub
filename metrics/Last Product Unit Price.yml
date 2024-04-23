@@ -10,3 +10,4 @@ semi_additive:
   level: Product Name
 dataset: factinternetsales
 column: unitprice
+folder: Product Metrics

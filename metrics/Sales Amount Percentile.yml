@@ -6,3 +6,4 @@ compression: 50
 named_quantiles: Quartiles
 dataset: factinternetsales
 column: salesamount
+folder: Sales Metrics
