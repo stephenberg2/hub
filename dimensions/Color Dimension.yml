@@ -1,0 +1,28 @@
+unique_name: Color Dimension
+object_type: dimension
+label: Color Dimension
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: Color Dimension Hierarchy
+    label: Color Dimension Hierarchy
+    folder: Product Attributes
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Color Dimension Level
+
+level_attributes:
+
+  - unique_name: Color Dimension Level
+    label: Color Dimension Level
+    dataset: factinternetsales
+    name_column: color
+    key_columns:
+      - color
+
+modeler_metadata:
+  version: 0
+  modified: "false"

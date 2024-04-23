@@ -1,0 +1,6 @@
+unique_name: customer count ly
+object_type: metric_calc
+label: customer count ly
+expression: "CASE WHEN ISEMPTY([Measures].[customercount1]) THEN \nNULL \nELSE (ParallelPeriod([Order\
+  \ Date Dimension].[Order Retail445].[Order Reporting_Day], 1, [Order Date Dimension].[Order\
+  \ Retail445].CurrentMember), [Measures].[customercount1]) END"

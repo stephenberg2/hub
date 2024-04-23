@@ -1,0 +1,15 @@
+unique_name: dimproductsubcategory
+object_type: dataset
+label: dimproductsubcategory
+connection_id: snowflake partner
+table: DIMPRODUCTSUBCATEGORY
+
+columns:
+  - name: productcategorykey
+    data_type: "decimal(38,0)"
+  - name: productsubcategoryalternatekey
+    data_type: "decimal(38,0)"
+  - name: productsubcategorykey
+    data_type: "decimal(38,0)"
+  - name: productsubcategoryname
+    data_type: string

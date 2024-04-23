@@ -1,0 +1,6 @@
+unique_name: Order Quantity Pct of Total
+object_type: metric_calc
+label: Order Quantity % of Total
+expression: "divide(([Product Dimension].[Product Dimension].CurrentMember,  [Measures].[orderquantity1])\
+  \ , ([Product Dimension].[Product Dimension].[All], [Measures].[orderquantity1]))"
+format: Percent

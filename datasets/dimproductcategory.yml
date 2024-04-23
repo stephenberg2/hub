@@ -1,0 +1,26 @@
+unique_name: dimproductcategory
+object_type: dataset
+label: dimproductcategory
+connection_id: snowflake partner
+table: DIMPRODUCTCATEGORY
+
+columns:
+  - name: prodlinesort
+    data_type: "decimal(1,0)"
+    sql: |-
+      case
+      when "productcategoryname" = 'Bikes'
+      then 4
+      when "productcategoryname" = 'Components'
+      then 1
+      when "productcategoryname" = 'Clothing'
+      then 2
+      when "productcategoryname" = 'Accessories'
+      then 3
+      end
+  - name: productcategoryalternatekey
+    data_type: "decimal(38,0)"
+  - name: productcategorykey
+    data_type: "decimal(38,0)"
+  - name: productcategoryname
+    data_type: string

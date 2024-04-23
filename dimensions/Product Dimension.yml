@@ -1,0 +1,132 @@
+unique_name: Product Dimension
+object_type: dimension
+label: Product Dimension
+description: "Product Line, Category, and Name"
+type: standard
+
+hierarchies:
+
+  - unique_name: Product Dimension
+    label: Product Hierarchy
+    folder: Product Attributes
+
+    levels:
+
+      - unique_name: Product Line
+
+      - unique_name: Product Category
+
+      - unique_name: Product Name
+
+        secondary_attributes:
+
+          - unique_name: d_englishproductname
+            label: Product Name
+            folder: Product Attributes
+            dataset: dimproduct
+            name_column: englishproductname
+            key_columns:
+              - englishproductname
+            sort_column: englishproductname
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+        metrics:
+
+          - unique_name: List Price
+            label: List Price
+            calculation_method: sum
+            folder: Product Metrics
+            dataset: dimproduct
+            column: listprice
+
+level_attributes:
+
+  - unique_name: Product Category
+    label: Product Category
+    is_unique_key: true
+    dataset: dimproductsubcategory
+    name_column: productsubcategoryname
+    key_columns:
+      - productsubcategorykey
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Product Line
+    label: Product Line
+    is_unique_key: true
+    dataset: dimproductcategory
+    name_column: productcategoryname
+    key_columns:
+      - productcategorykey
+    sort_column: prodlinesort
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Product Name
+    label: Product Name
+    description: Full Product Name
+    is_unique_key: true
+    dataset: dimproduct
+    name_column: englishproductname
+    key_columns:
+      - productkey
+
+relationships:
+
+  - from:
+      dataset: dimproduct
+      join_columns:
+        - productsubcategorykey
+    to:
+      level: Product Category
+    type: snowflake
+
+  - from:
+      dataset: dimproductsubcategory
+      join_columns:
+        - productcategorykey
+    to:
+      level: Product Line
+    type: snowflake
+
+calculation_groups:
+
+  - unique_name: Product Metrics
+    label: Product Metrics
+    folder: Product Attributes
+
+    calculated_members:
+
+      - unique_name: Product Hierarchy Pct of Total
+        expression: "divide(([Product Dimension].[Product Dimension].CurrentMember,\
+          \ [Measures].currentMember) , ([Product Dimension].[Product Dimension].[All],\
+          \ [Measures].currentMember))"
+        format: Percent
+        hierarchy: Product Dimension
+        template: Custom
+
+      - unique_name: Current
+        description: The measure's value for the current dimension members in the
+          query.
+        expression: "([Product Dimension].[Product Dimension].CurrentMember, [Measures].currentMember)"
+        format: Standard
+        hierarchy: Product Dimension
+        template: Current
+        is_default: true
+
+modeler_metadata:
+  version: 0
+  modified: "false"
