@@ -1,7 +1,7 @@
 unique_name: dimproductcategory
 object_type: dataset
 label: dimproductcategory
-connection_id: snowflake partner
+connection_id: snowflake
 table: DIMPRODUCTCATEGORY
 
 columns:
