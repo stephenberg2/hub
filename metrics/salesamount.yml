@@ -1,8 +1,7 @@
-unique_name: Sales Amount
+unique_name: salesamount
 object_type: metric
 label: Sales Amount
 calculation_method: sum
 format: "$#,##0.00"
 dataset: factinternetsales
 column: salesamount
-folder: Sales Metrics

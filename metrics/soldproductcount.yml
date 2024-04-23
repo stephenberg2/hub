@@ -1,4 +1,4 @@
-unique_name: Sold Product Count
+unique_name: soldproductcount
 object_type: metric
 label: Sold Product Count
 description: Sold Product Non-Distinct Count
@@ -6,4 +6,3 @@ calculation_method: count non-null
 format: General Number
 dataset: factinternetsales
 column: productkey
-folder: Sales Metrics
