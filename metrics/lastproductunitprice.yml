@@ -1,4 +1,4 @@
-unique_name: Last Product Unit Price
+unique_name: lastproductunitprice
 object_type: metric
 label: Last Product Unit Price
 calculation_method: maximum

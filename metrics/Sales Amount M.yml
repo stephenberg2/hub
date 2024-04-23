@@ -1,7 +1,0 @@
-unique_name: Sales Amount M
-object_type: metric
-label: Sales Amount M
-calculation_method: sum
-format: "#.##,,\"M\""
-dataset: factinternetsales
-column: salesamount
