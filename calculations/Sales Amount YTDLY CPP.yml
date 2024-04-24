@@ -1,8 +1,12 @@
 unique_name: Sales Amount YTDLY CPP
 object_type: metric_calc
 label: Sales Amount YTDLY CPP
-expression: "Aggregate(\nPeriodsToDate([Order Date Dimension].[Order CustomPP445].[Order\
-  \ customyear], \nParallelPeriod([Order Date Dimension].[Order CustomPP445].[Order\
-  \ customyear], \n1, \n[Order Date Dimension].[Order CustomPP445].CurrentMember)),\
-  \ \n[Measures].[salesamount1])"
-format: "$#,##0.00"
+expression: |-
+  Aggregate(
+  PeriodsToDate([Order Date Dimension].[Order CustomPP445].[Order customyear], 
+  ParallelPeriod([Order Date Dimension].[Order CustomPP445].[Order customyear], 
+  1, 
+  [Order Date Dimension].[Order CustomPP445].CurrentMember)), 
+  [Measures].[salesamount])
+format: $#,##0.00
+is_hidden: false
