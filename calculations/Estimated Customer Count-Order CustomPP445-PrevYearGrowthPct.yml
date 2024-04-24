@@ -6,11 +6,11 @@ description: >-
   with [Order CustomPP445]
 expression: >-
   CASE WHEN ISEMPTY([Measures].[Estimated Customer Count-Order
-  CustomPP445-PrevYear]) 
-  THEN NULL 
-  ELSE 
-  [Measures].[Estimated Customer Count-Order CustomPP445-PrevYearGrowth] /
+  CustomPP445-PrevYear]) THEN NULL 
+
+  ELSE [Measures].[Estimated Customer Count-Order CustomPP445-PrevYearGrowth] /
   [Measures].[Estimated Customer Count-Order CustomPP445-PrevYear] 
+
   END
 format: Percent
 is_hidden: false

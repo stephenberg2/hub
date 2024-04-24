@@ -1,6 +1,14 @@
 unique_name: Order Quantity-Order Retail445-PrevYear
 object_type: metric_calc
 label: Order Quantity-Order Retail445-PrevYear
-expression: "CASE \nWHEN ISEMPTY([Measures].[orderquantity1]) \nTHEN NULL \nELSE (ParallelPeriod([Order\
-  \ Date Dimension].[Order Retail445].[Order ReportIng_Year], 1, [Order Date Dimension].[Order\
-  \ Retail445].CurrentMember), [Measures].[orderquantity1]) END"
+expression: >-
+  CASE 
+
+  WHEN ISEMPTY([Measures].[orderquantity]) 
+
+  THEN NULL 
+
+  ELSE (ParallelPeriod([Order Date Dimension].[Order Retail445].[Order
+  ReportIng_Year], 1, [Order Date Dimension].[Order Retail445].CurrentMember),
+  [Measures].[orderquantity]) END
+is_hidden: false
