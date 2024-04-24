@@ -7,12 +7,16 @@ description: >-
 expression: >-
   CASE WHEN ISEMPTY([Measures].[Estimated Customer Count-Order
   CustomPP445-PrevYear]) or ISEMPTY(([Order Date Dimension].[Order
-  CustomPP445].CurrentMember, [Measures].[customercountestimate])) 
-  THEN NULL 
+  CustomPP445].CurrentMember, [Measures].[estimatedcustomercount])) THEN
+
+  NULL 
+
   ELSE 
+
   ([Order Date Dimension].[Order CustomPP445].CurrentMember,
-  [Measures].[customercountestimate]) - [Measures].[Estimated Customer
+  [Measures].[customercountestimate1]) - [Measures].[Estimated Customer
   Count-Order CustomPP445-PrevYear]
+
   END
 format: General Number
 is_hidden: false
