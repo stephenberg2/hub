@@ -1,6 +1,15 @@
 unique_name: Order Quantity-Order Retail445-PrevYearGrowthPct
 object_type: metric_calc
 label: Order Quantity-Order Retail445-PrevYearGrowthPct
-expression: "CASE \nWHEN ISEMPTY([Measures].[Order Quantity-Order Retail445-PrevYear])\
-  \ \nTHEN NULL \nELSE [Measures].[Order Quantity-Order Retail445-PrevYearGrowth]\
-  \ / [Measures].[Order Quantity-Order Retail445-PrevYear] \nEND"
+expression: >-
+  CASE 
+
+  WHEN ISEMPTY([Measures].[Order Quantity-Order Retail445-PrevYear]) 
+
+  THEN NULL 
+
+  ELSE [Measures].[Order Quantity-Order Retail445-PrevYearGrowth] /
+  [Measures].[Order Quantity-Order Retail445-PrevYear] 
+
+  END
+is_hidden: false
