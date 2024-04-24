@@ -5,12 +5,12 @@ description: >-
   Previous Period Sales with a custom lookback key.  Use with [Order
   CustomPP445]
 expression: >-
-  CASE WHEN ISEMPTY([Measures].[soldproductNDC1]) THEN 
+  CASE WHEN ISEMPTY([Measures].[soldproductcount]) THEN 
 
   NULL
 
   ELSE (ParallelPeriod([Order Date Dimension].[Order CustomPP445].[Order
   customyear], 1, [Order Date Dimension].[Order CustomPP445].CurrentMember),
-  [Measures].[soldproductNDC1]) END
+  [Measures].[soldproductcount]) END
 format: General Number
 is_hidden: false

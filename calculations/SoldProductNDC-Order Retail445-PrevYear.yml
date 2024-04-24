@@ -3,12 +3,12 @@ object_type: metric_calc
 label: SoldProductNDC-Order Retail445-PrevYear
 description: Order Sales Amount Prev Year (Retail445)
 expression: >-
-  CASE WHEN ISEMPTY([Measures].[soldproductNDC1]) THEN 
+  CASE WHEN ISEMPTY([Measures].[soldproductcount]) THEN 
 
   NULL 
 
   ELSE (ParallelPeriod([Order Date Dimension].[Order Retail445].[Order
   ReportIng_Year], 1, [Order Date Dimension].[Order Retail445].CurrentMember),
-  [Measures].[soldproductNDC1]) END
+  [Measures].[soldproductcount]) END
 format: General Number
 is_hidden: false

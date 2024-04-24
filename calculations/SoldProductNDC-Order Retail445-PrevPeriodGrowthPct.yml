@@ -8,7 +8,7 @@ expression: >-
   ELSE
 
   (([Order Date Dimension].[Order Retail445].CurrentMember,
-  [Measures].[soldproductNDC1]) - [Measures].[SoldProductNDC-Order
+  [Measures].[soldproductcount]) - [Measures].[SoldProductNDC-Order
   Retail445-Prev]) / [Measures].[SoldProductNDC-Order Retail445-Prev]
 
   END

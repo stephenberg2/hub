@@ -11,7 +11,7 @@ expression: >-
 
   ParallelPeriod([Order Date Dimension].[Order Retail445].[Order
   ReportIng_Year], 1, [Order Date Dimension].[Order Retail445].CurrentMember),
-  [Measures].[soldproductNDC1]
+  [Measures].[soldproductcount]
 
   )
 format: General Number

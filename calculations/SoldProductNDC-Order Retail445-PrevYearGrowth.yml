@@ -5,14 +5,14 @@ description: Parallel Period Sales Growth  Since the Previous Year
 expression: >
   CASE WHEN ISEMPTY([Measures].[SoldProductNDC-Order Retail445-PrevYear]) or
   ISEMPTY(([Order Date Dimension].[Order Retail445].CurrentMember,
-  [Measures].[soldproductNDC1])) THEN
+  [Measures].[soldproductcount])) THEN
 
   NULL 
 
   ELSE 
 
   ([Order Date Dimension].[Order Retail445].CurrentMember,
-  [Measures].[soldproductNDC1]) - [Measures].[SoldProductNDC-Order
+  [Measures].[soldproductcount]) - [Measures].[SoldProductNDC-Order
   Retail445-PrevYear]
 
   END

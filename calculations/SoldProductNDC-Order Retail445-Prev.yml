@@ -3,14 +3,14 @@ object_type: metric_calc
 label: 'SoldProductNDC-Order Retail445-Prev '
 description: Order Reporting Hierarchy Previous Period Sales
 expression: >
-  CASE WHEN ISEMPTY([Measures].[soldproductNDC1]) 
+  CASE WHEN ISEMPTY([Measures].[soldproductcount]) 
 
   THEN NULL
 
   ELSE
 
   ([Order Date Dimension].[Order Retail445].CurrentMember.PrevMember,
-  [Measures].[soldproductNDC1])
+  [Measures].[soldproductcount])
 
   END
 format: General Number

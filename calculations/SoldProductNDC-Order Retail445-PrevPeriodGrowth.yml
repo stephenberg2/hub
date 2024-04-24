@@ -4,14 +4,14 @@ label: SoldProductNDC-Order Retail445-PrevPeriodGrowth
 description: Order Retail 445 Growth since previous period.
 expression: >-
   CASE WHEN ISEMPTY([Measures].[SoldProductNDC-Order Retail445-Prev]) OR
-  ISEMPTY([Measures].[soldproductNDC1])
+  ISEMPTY([Measures].[soldproductcount])
 
   THEN NULL 
 
   ELSE 
 
   ([Order Date Dimension].[Order Retail445].CurrentMember,
-  [Measures].[soldproductNDC1]) - [Measures].[SoldProductNDC-Order
+  [Measures].[soldproductcount]) - [Measures].[SoldProductNDC-Order
   Retail445-Prev]
 
   END
