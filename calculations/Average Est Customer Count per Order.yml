@@ -1,4 +1,5 @@
 unique_name: Average Est Customer Count per Order
 object_type: metric_calc
 label: Average Est Customer Count per Order
-expression: "([Measures].[estimatedcustomercount] / [Measures].[orderquantity])"
+expression: ([Measures].[estimatedcustomercount] / [Measures].[orderquantity])
+is_hidden: false
