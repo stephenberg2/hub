@@ -1,0 +1,14 @@
+unique_name: New Model
+object_type: model
+label: New Model
+metrics:
+  - unique_name: orderquantity
+relationships:
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
